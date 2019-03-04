@@ -9,7 +9,7 @@ const PressRelease = ({ data }) => {
     <Layout>
       <Helmet title={data.contentfulPressRelease.title} />
       <header>
-        <nav><a href="/">« Go back</a></nav>
+        <nav><a href="/" className="back">« Go back</a></nav>
         <div className="title container">
           <h1>{data.contentfulPressRelease.title}</h1>
         </div>
