@@ -1,7 +1,7 @@
-const path = require(`path`);
+const path = require('path');
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
   return new Promise((resolve, reject) => {
     graphql(`
       {
@@ -26,7 +26,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       result.data.allContentfulSalesDemoPage.edges.forEach(({ node }) => {
         createPage({
           path: '/sales-demo-pages/'+node.slug,
-          component: path.resolve(`./src/templates/salesDemoPage.jsx`),
+          component: path.resolve('./src/templates/salesDemoPage.jsx'),
           context: {
             id: node.id
           },
@@ -35,7 +35,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       result.data.allContentfulPressRelease.edges.forEach(({ node }) => {
         createPage({
           path: '/press-releases/'+node.slug,
-          component: path.resolve(`./src/templates/pressRelease.jsx`),
+          component: path.resolve('./src/templates/pressRelease.jsx'),
           context: {
             id: node.id
           },

@@ -1,7 +1,8 @@
-import React from "react"
-import Layout from "../components/layout"
+import React from 'react'; // eslint-disable-line no-unused-vars
+import Layout from '../components/layout'; // eslint-disable-line no-unused-vars
+import { graphql } from 'gatsby';
 
-const Entry = ({ entry, type }) => {
+const Entry = ({ entry, type }) => { // eslint-disable-line no-unused-vars
   return (
     <li>
       <a href={'/' + type + '/' + entry.slug}>{entry.title}</a>
