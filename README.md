@@ -1,6 +1,6 @@
 # Installation
 
-1. `git clone https://github.com/cachrisman/rich-text-demo`
+1. `git clone https://github.com/contentful/rich-text-demo`
 2. `cd rich-text-demo`
 3. `npm i` or `yarn`
 4. `touch .env.development` and fill in like this:
